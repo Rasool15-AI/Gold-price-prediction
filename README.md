@@ -1,92 +1,81 @@
-# 🪙 Gold Price Prediction
+🪙 Gold Price Prediction
+This project focuses on predicting gold prices using historical financial data and machine learning techniques. The model is trained using the Random Forest Regressor algorithm for high accuracy in regression tasks.
 
-This project applies machine learning to predict the price of gold based on historical data and related economic indicators. It demonstrates a data science pipeline from data exploration to model training and evaluation.
+📊 Dataset
+The dataset used is gld_price_data.csv, which contains features such as:
 
-## 📁 Project Structure
+SPX (S&P 500 index)
 
-gold_price_prediction/
-├── gold_price_prediction.ipynb # Jupyter notebook with code, analysis, and model
-├── data/ # Folder for datasets (not included in this repo)
-│ └── gold_price.csv # Dataset used for training/testing
-└── README.md # Project documentation
+GLD (Gold ETF prices)
 
-markdown
-Copy
-Edit
+USO (Oil ETF prices)
 
-## 📊 Dataset
+SLV (Silver ETF prices)
 
-The dataset includes historical values for gold prices and various economic indicators like:
+Others...
 
-- USD/INR exchange rate
-- Crude oil prices
-- Stock market indexes (e.g., S&P 500)
-- Interest rates
-- Inflation rate
+📌 Note: Ensure you have this dataset locally before running the notebook.
 
-Ensure you place your dataset (e.g., `gold_price.csv`) in the `data/` directory before running the notebook.
+📌 Project Highlights
+📥 Data loading and cleaning using pandas
 
-## 🔍 Exploratory Data Analysis (EDA)
+📈 Exploratory Data Analysis (EDA) with matplotlib and seaborn
 
-- Checked for missing values and data types
-- Visualized feature correlations using heatmaps
-- Analyzed trends in gold prices and economic indicators
+🧠 Model training using RandomForestRegressor from scikit-learn
 
-## 🧠 Machine Learning Model
+🧪 Model evaluation using R² Score
 
-- **Algorithm**: Linear Regression (and optionally others like Random Forest, SVR)
-- **Libraries Used**: `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn`
-- **Evaluation Metrics**:
-  - Mean Absolute Error (MAE)
-  - Mean Squared Error (MSE)
-  - R² Score
+📉 Actual vs Predicted plot for performance visualization
 
-## 📈 Results
-
-The model was trained and tested with a train-test split and achieved good predictive performance using selected features. The results were visualized with actual vs. predicted plots.
-
-## 🚀 How to Run
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/gold_price_prediction.git
-   cd gold_price_prediction
-Install required packages:
+🔧 Requirements
+Install the required Python libraries using:
 
 bash
 Copy
 Edit
-pip install -r requirements.txt
-Run the notebook:
+pip install numpy pandas matplotlib seaborn scikit-learn
+🚀 How to Run
+Clone this repository:
 
 bash
 Copy
 Edit
-jupyter notebook gold_price_prediction.ipynb
-🛠 Requirements
-Python 3.7+
+git clone https://github.com/<your-username>/gold_price_prediction.git
+cd gold_price_prediction
+Make sure you have gld_price_data.csv in your project directory.
 
-pandas
+Run the notebook using Jupyter or Colab.
 
-numpy
+📈 Evaluation Metrics
+The model’s performance is measured using the R² Score, which indicates how well the predictions match the actual gold prices.
 
-matplotlib
+python
+Copy
+Edit
+from sklearn import metrics
+r2 = metrics.r2_score(Y_test, test_data_prediction)
+print("R² Score:", r2)
+A higher R² score (close to 1) indicates a better fit.
 
-seaborn
+📉 Sample Output
+Evaluation Metric:
 
-scikit-learn
+yaml
+Copy
+Edit
+R² Score: 0.989 (example)
+Visualizations:
 
-jupyter
+Correlation heatmap
 
-📌 Future Improvements
-Incorporate more recent data sources
+Line graph of actual vs predicted prices
 
-Try advanced models like LSTM for time-series prediction
+📚 Future Improvements
+Incorporate time-series forecasting models (ARIMA, LSTM)
 
-Deploy as a web app using Streamlit or Flask
+Automate hyperparameter tuning
 
-📄 License
-This project is open-source and available under the MIT License.
+Use external market indicators
 
-Author: Mohamed rasooldeen
+🧑‍💻 Author
+Mohamed Rasooldeen
